@@ -1,0 +1,12 @@
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\DBLayer\bin\Debug\net7.0\DBLayer.deps.json
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\DBLayer\bin\Debug\net7.0\DBLayer.dll
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\DBLayer\bin\Debug\net7.0\DBLayer.pdb
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\DBLayer\obj\Debug\net7.0\DBLayer.csproj.AssemblyReference.cache
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\DBLayer\obj\Debug\net7.0\DBLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\DBLayer\obj\Debug\net7.0\DBLayer.AssemblyInfoInputs.cache
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\DBLayer\obj\Debug\net7.0\DBLayer.AssemblyInfo.cs
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\DBLayer\obj\Debug\net7.0\DBLayer.csproj.CoreCompileInputs.cache
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\DBLayer\obj\Debug\net7.0\DBLayer.dll
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\DBLayer\obj\Debug\net7.0\refint\DBLayer.dll
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\DBLayer\obj\Debug\net7.0\DBLayer.pdb
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\DBLayer\obj\Debug\net7.0\ref\DBLayer.dll
