@@ -24,8 +24,6 @@ namespace Northwind
 
             // Add services to the container.
             
-
-
             //context
             builder.Services.AddDbContext<NorthwindDefContext>();
 
