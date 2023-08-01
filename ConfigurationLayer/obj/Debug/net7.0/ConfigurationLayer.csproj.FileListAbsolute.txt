@@ -10,3 +10,15 @@ C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ConfigurationLayer\obj\Debug\n
 C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ConfigurationLayer\obj\Debug\net7.0\refint\ConfigurationLayer.dll
 C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ConfigurationLayer\obj\Debug\net7.0\ConfigurationLayer.pdb
 C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ConfigurationLayer\obj\Debug\net7.0\ref\ConfigurationLayer.dll
+C:\Users\pspicoli\Desktop\CRUD Northwind Project\ConfigurationLayer\bin\Debug\net7.0\ConfigurationLayer.deps.json
+C:\Users\pspicoli\Desktop\CRUD Northwind Project\ConfigurationLayer\bin\Debug\net7.0\ConfigurationLayer.dll
+C:\Users\pspicoli\Desktop\CRUD Northwind Project\ConfigurationLayer\bin\Debug\net7.0\ConfigurationLayer.pdb
+C:\Users\pspicoli\Desktop\CRUD Northwind Project\ConfigurationLayer\obj\Debug\net7.0\ConfigurationLayer.csproj.AssemblyReference.cache
+C:\Users\pspicoli\Desktop\CRUD Northwind Project\ConfigurationLayer\obj\Debug\net7.0\ConfigurationLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pspicoli\Desktop\CRUD Northwind Project\ConfigurationLayer\obj\Debug\net7.0\ConfigurationLayer.AssemblyInfoInputs.cache
+C:\Users\pspicoli\Desktop\CRUD Northwind Project\ConfigurationLayer\obj\Debug\net7.0\ConfigurationLayer.AssemblyInfo.cs
+C:\Users\pspicoli\Desktop\CRUD Northwind Project\ConfigurationLayer\obj\Debug\net7.0\ConfigurationLayer.csproj.CoreCompileInputs.cache
+C:\Users\pspicoli\Desktop\CRUD Northwind Project\ConfigurationLayer\obj\Debug\net7.0\ConfigurationLayer.dll
+C:\Users\pspicoli\Desktop\CRUD Northwind Project\ConfigurationLayer\obj\Debug\net7.0\refint\ConfigurationLayer.dll
+C:\Users\pspicoli\Desktop\CRUD Northwind Project\ConfigurationLayer\obj\Debug\net7.0\ConfigurationLayer.pdb
+C:\Users\pspicoli\Desktop\CRUD Northwind Project\ConfigurationLayer\obj\Debug\net7.0\ref\ConfigurationLayer.dll

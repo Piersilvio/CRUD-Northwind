@@ -23,6 +23,8 @@ namespace Northwind
             ConfigurationManager configuration = builder.Configuration;
 
             // Add services to the container.
+            
+
 
             //context
             builder.Services.AddDbContext<NorthwindDefContext>();
