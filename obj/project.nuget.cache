@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xZQa9A3pW9vWqDzHmC1e4KZBt5Pxp6ktxG6gxS95CY6RvQV8+GcP2zupKDjVtGgCCpJE8CLcAi5E4odZWdOClA==",
+  "dgSpecHash": "E/wpznrXPfE6uig5wAPOWROycakvFbRL31uBpZuNIOBEYVnLU+t0iE8ar94Vl6QrtepgehMOjDuR5x20jyCfUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pspicoli\\Desktop\\refactorAmari\\Northwind\\Northwind.csproj",
+  "projectFilePath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind Project\\Northwind.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pspicoli\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\pspicoli\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
