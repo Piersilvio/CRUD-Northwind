@@ -85,7 +85,7 @@ namespace Northwind_def.Controllers
                 }
             }catch (Exception ex)
             {
-                return StatusCode(500, ex.StackTrace);
+                return StatusCode(500, ex.Message);
             }
         }
 
