@@ -1,0 +1,15 @@
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\obj\Debug\net7.0\ServiceLayer.csproj.AssemblyReference.cache
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\obj\Debug\net7.0\ServiceLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\obj\Debug\net7.0\ServiceLayer.AssemblyInfoInputs.cache
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\obj\Debug\net7.0\ServiceLayer.AssemblyInfo.cs
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\obj\Debug\net7.0\ServiceLayer.csproj.CoreCompileInputs.cache
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\bin\Debug\net7.0\ServiceLayer.deps.json
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\bin\Debug\net7.0\ServiceLayer.dll
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\bin\Debug\net7.0\ServiceLayer.pdb
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\bin\Debug\net7.0\DBLayer.dll
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\bin\Debug\net7.0\DBLayer.pdb
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\obj\Debug\net7.0\ServiceLayer.csproj.CopyComplete
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\obj\Debug\net7.0\ServiceLayer.dll
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\obj\Debug\net7.0\refint\ServiceLayer.dll
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\obj\Debug\net7.0\ServiceLayer.pdb
+C:\Users\pspicoli\Desktop\refactorAmari\Northwind\ServiceLayer\obj\Debug\net7.0\ref\ServiceLayer.dll
