@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace DBLayer.ExceptionHandler
 {
-    public delegate Task<T> ExceptionHandlerDelegate<T>();
+    //public delegate Task<T> ExceptionHandlerDelegate<T>();
 
     public class ExceptionHandlerClass
     {
         public ExceptionHandlerClass() { }
 
-        public static async Task<T> HandleExceptions<T>(ExceptionHandlerDelegate<T> handler)
+        public static async Task<T> HandleExceptions<T>(Func<Task<T>> handler)
         {
             try
             {
