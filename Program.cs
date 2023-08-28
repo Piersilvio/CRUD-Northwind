@@ -32,6 +32,7 @@ namespace Northwind
             builder.Services.AddScoped<IRepositoryOrderr, OrderrRepository>();
             builder.Services.AddScoped<IRepositoryProduct, ProductRepository>();
             builder.Services.AddScoped<IRepositorySupplier, SupplierRepository>();
+            //builder.Services.AddScoped<IRepository, Repository>();
             builder.Services.AddScoped<IMapperConfig, MapperConfig>();
 
             //DI ConfigurationServices
