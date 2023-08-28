@@ -1,14 +1,8 @@
 ﻿
-using DBLayer;
 using DBLayer.DAO.IRepository;
 using DBLayer.ExceptionHandler;
 using DBLayer.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DBLayer.DAO.DAOImpl
 {
