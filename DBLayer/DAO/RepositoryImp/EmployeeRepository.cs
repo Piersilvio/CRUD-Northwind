@@ -11,7 +11,7 @@ namespace DBLayer.DAO.DAOImpl
 
         public EmployeeRepository(NorthwindDefContext dbContext) : base(dbContext)
         {
-            this.context = dbContext;
+            context = dbContext;
         }
 
         public async Task<List<Employee>> GetEmpByCity(string city)
