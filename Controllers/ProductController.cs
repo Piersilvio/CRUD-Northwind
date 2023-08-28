@@ -4,6 +4,7 @@ using DBLayer.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Northwind;
 using ServiceLayer.DTO;
 using ServiceLayer.IService;
 using ServiceLayer.Service.ServiceImp;
@@ -33,17 +34,17 @@ namespace Northwind_def.Controllers
                 if (!await _serviceProduct.ExistsProduct(id))
                 {
                     ModelState.AddModelError("ProductID", "Product doesn't exist");
-                    return StatusCode(409, "Product doesn't exist");
+                    return StatusCode((int)HTTPStatusCode.Conflict, "Product doesn't exist");
                 }
                 else
                 {
                     var em = await _serviceProduct.GetProduct(id);
-                    return StatusCode(200, em);
+                    return StatusCode((int)HTTPStatusCode.OK, em);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.Message);
             }
         }
 
@@ -55,16 +56,16 @@ namespace Northwind_def.Controllers
                 var emp = await _serviceProduct.GetProductByName(name);
                 if (emp is null)
                 {
-                    return StatusCode(404, "Products not founjd");
+                    return StatusCode((int)HTTPStatusCode.NotFound, "Products not founjd");
                 }
                 else
                 {
-                    return StatusCode(200, emp);
+                    return StatusCode((int)HTTPStatusCode.OK, emp);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.Message);
             }
         }
 
@@ -76,17 +77,17 @@ namespace Northwind_def.Controllers
                 if (await _serviceProduct.ExistsProduct(entity.ProductID))
                 {
                     ModelState.AddModelError("ProductID", "Product already exist");
-                    return StatusCode(409, "Product already exist");
+                    return StatusCode((int)HTTPStatusCode.Conflict, "Product already exist");
                 }
                 else
                 {
                     var query = await _serviceProduct.CreateProduct(entity);
-                    return StatusCode(200, query);
+                    return StatusCode((int)HTTPStatusCode.OK, query);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.Message);
             }
         }
 
@@ -97,18 +98,18 @@ namespace Northwind_def.Controllers
             {
                 if (!await _serviceProduct.ExistsProduct(p.ProductID))
                 {
-                    return StatusCode(404, "Product not found");
+                    return StatusCode((int)HTTPStatusCode.NotFound, "Product not found");
                 }
                 else
                 {
                     var emp = await _serviceProduct.UpdateProduct(p);
 
-                    return StatusCode(200, emp);
+                    return StatusCode((int)HTTPStatusCode.OK, emp);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.Message);
             }
         }
 
@@ -119,18 +120,18 @@ namespace Northwind_def.Controllers
             {
                 if (!await _serviceProduct.ExistsProduct(entity.ProductID))
                 {
-                    return StatusCode(404, "Product Not Found");
+                    return StatusCode((int)HTTPStatusCode.NotFound, "Product Not Found");
                 }
                 else
                 {
                     var flag = await _serviceProduct.DeleteProduct(entity);
 
-                    return StatusCode(200, flag);
+                    return StatusCode((int)HTTPStatusCode.OK, flag);
                 }
             }
             catch (Exception e)
             {
-                return StatusCode(500, e.Message);
+                return StatusCode((int)HTTPStatusCode.InternalServerError, e.Message);
             }
         }
     }
