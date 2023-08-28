@@ -12,12 +12,11 @@ using System.Threading.Tasks;
 
 namespace DBLayer.DAO.DAOImpl
 {
-    public class OrderrRepository : IRepositoryOrderr
+    public class OrderrRepository : Repository<Orderr>, IRepositoryOrderr
     {
         private readonly NorthwindDefContext context;
 
-        //iniettato per DI 
-        public OrderrRepository(NorthwindDefContext dbContext)
+        public OrderrRepository(NorthwindDefContext dbContext) : base(dbContext)
         {
             context = dbContext;
         }
@@ -42,53 +41,6 @@ namespace DBLayer.DAO.DAOImpl
                         .Where(x => x.Customer.City == city)
                         .Select(x => x.Order)
                         .ToListAsync();
-            });
-        }
-            
-        public async Task<Orderr> Create(Orderr entity)
-        {
-            return await ExceptionHandlerClass.HandleExceptions<Orderr>(async () =>
-            {
-                context.Orderr.Add(entity);
-                await context.SaveChangesAsync();
-                return entity;
-            });
-        }
-
-        public async Task<Orderr> Get(int id)
-        {
-            return await ExceptionHandlerClass.HandleExceptions<Orderr>(async () =>
-            {
-                Orderr? order = await context.Orderr.Where(e => e.OrderID == id)
-                .FirstOrDefaultAsync(e => e.OrderID == id);
-                return order;
-            });
-        }
-
-        public async Task<Orderr> Update(Orderr entity)
-        {
-            return await ExceptionHandlerClass.HandleExceptions<Orderr>(async () =>
-            {
-                context.Orderr.Update(entity);
-                await context.SaveChangesAsync();
-
-                return entity;
-            });
-        }
-
-        public async Task<bool> Delete(Orderr o)
-        {
-            return await ExceptionHandlerClass.HandleExceptions<bool>(async () =>
-            {
-                bool isDeleted = false;
-
-                context.Orderr.Remove(o);
-                if (await context.SaveChangesAsync() > 0)
-                {
-                    isDeleted = true;
-                }
-
-                return isDeleted;
             });
         }
 
