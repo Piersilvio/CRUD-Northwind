@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
-using System.Data;
 using DBLayer.Models;
-using DBLayer.DAO.IRepository;
-using ServiceLayer.AutoMapper;
 using ServiceLayer.DTO;
 using ServiceLayer.IService;
+using Northwind;
+using System.Net;
 
 namespace Northwind_def.Controllers
 {
@@ -32,18 +31,18 @@ namespace Northwind_def.Controllers
             {
                 if (!await _employeeService.ExistsEmployee(id))
                 {
-                    ModelState.AddModelError("EmployeeId", "Employee doesn't exist");
-                    return StatusCode(409, "Employee doesn't exist");
+                    //ModelState.AddModelError("EmployeeId", "Employee doesn't exist");
+                    return StatusCode((int)HTTPStatusCode.Conflict, "Employee doesn't exist");
                 }
                 else
                 {
                     var employee = await _employeeService.GetEmployee(id);
-                    return StatusCode(200, employee);
+                    return StatusCode((int)HTTPStatusCode.OK, employee);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.StackTrace);
+                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.StackTrace);
             }
         }
 
@@ -55,16 +54,16 @@ namespace Northwind_def.Controllers
                 var emp = await _employeeService.GetEmployeeByCity(city);
                 if (emp is null)
                 {
-                    return StatusCode(404, "Employee not founjd");
+                    return StatusCode((int)HTTPStatusCode.NotFound, "Employee not founjd");
                 }
                 else
                 {
-                    return StatusCode(200, emp);
+                    return StatusCode((int)HTTPStatusCode.OK, emp);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.StackTrace);
+                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.StackTrace);
             }
         }
 
@@ -76,16 +75,16 @@ namespace Northwind_def.Controllers
                 if (await _employeeService.ExistsEmployee(entity.EmployeeID))
                 {
                     ModelState.AddModelError("EmployeeId", "Employee already exist");
-                    return StatusCode(409, "Employee already exist");
+                    return StatusCode((int)HTTPStatusCode.Conflict, "Employee already exist");
                 }
                 else
                 {
                     var query = await _employeeService.CreateEmployee(entity);
-                    return StatusCode(200, query);
+                    return StatusCode((int)HTTPStatusCode.OK, query);
                 }
             }catch (Exception ex)
             {
-                return StatusCode(500, ex.StackTrace);
+                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.StackTrace);
             }
         }
 
@@ -96,16 +95,16 @@ namespace Northwind_def.Controllers
             {
                 if (!await _employeeService.ExistsEmployee(em.EmployeeID))
                 {
-                    return StatusCode(404, "Employee not found");
+                    return StatusCode((int)HTTPStatusCode.NotFound, "Employee not found");
                 }
                 else
                 {
                     var emp = await _employeeService.UpdateEmployee(em);
-                    return StatusCode(200, emp);
+                    return StatusCode((int)HTTPStatusCode.OK, emp);
                 }
             }catch(Exception ex)
             {
-                return StatusCode(500, ex.StackTrace);
+                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.StackTrace);
             }
         }
 
@@ -116,16 +115,16 @@ namespace Northwind_def.Controllers
             {
                 if (!await _employeeService.ExistsEmployee(em.EmployeeID))
                 {
-                    return StatusCode(404, "Employee Not Found");
+                    return StatusCode((int)HTTPStatusCode.NotFound, "Employee Not Found");
                 }
                 else
                 {
                     var flag = await _employeeService.DeleteEmployee(em);
-                    return StatusCode(200, flag);
+                    return StatusCode((int)HTTPStatusCode.OK, flag);
                 }
             }catch(Exception e)
             {
-                return StatusCode(500, e.StackTrace);
+                return StatusCode((int)HTTPStatusCode.InternalServerError, e.StackTrace);
             }
         }
     }
