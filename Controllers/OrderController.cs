@@ -8,6 +8,7 @@ using ServiceLayer.AutoMapper;
 using ServiceLayer.DTO;
 using ServiceLayer.IService;
 using ServiceLayer.Service.ServiceImp;
+using System.Net;
 
 namespace Northwind_def.Controllers
 {
@@ -33,17 +34,17 @@ namespace Northwind_def.Controllers
             {
                 if (!await _orderService.ExistsOrder(id))
                 {
-                    return StatusCode((int)HTTPStatusCode.NotFound, "order not found");
+                    return StatusCode((int)HttpStatusCode.NotFound, "order not found");
                 }
                 else
                 {
                     var orderById = await _orderService.GetOrder(id);
-                    return StatusCode((int)HTTPStatusCode.OK, orderById);
+                    return StatusCode((int)HttpStatusCode.OK, orderById);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.StackTrace);
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.StackTrace);
             }
         }
 
@@ -55,17 +56,17 @@ namespace Northwind_def.Controllers
                 var e = await _orderService.GetOrdersByCustomerID(customerID);
                 if (e is null)
                 {
-                    return StatusCode((int)HTTPStatusCode.NotFound, "Orders not found");
+                    return StatusCode((int)HttpStatusCode.NotFound, "Orders not found");
                 }
                 else
                 {
-                    return StatusCode((int)HTTPStatusCode.OK, e);
+                    return StatusCode((int)HttpStatusCode.OK, e);
                 }
 
             }
             catch (Exception e)
             {
-                return StatusCode((int)HTTPStatusCode.InternalServerError, e.StackTrace);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.StackTrace);
             }
         }
 
@@ -77,16 +78,16 @@ namespace Northwind_def.Controllers
                 var e = await _orderService.GetOrderByCity(city);
                 if (e is null)
                 {
-                    return StatusCode((int)HTTPStatusCode.NotFound, "Orders not found");
+                    return StatusCode((int)HttpStatusCode.NotFound, "Orders not found");
                 }
                 else
                 {
-                    return StatusCode((int)HTTPStatusCode.OK, e);
+                    return StatusCode((int)HttpStatusCode.OK, e);
                 }
             }
             catch (Exception e)
             {
-                return StatusCode((int)HTTPStatusCode.InternalServerError, e.StackTrace);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.StackTrace);
             }
         }
 
@@ -98,17 +99,17 @@ namespace Northwind_def.Controllers
                 if (await _orderService.ExistsOrder(entity.OrderID))
                 {
                     ModelState.AddModelError("OrderID", "Order already exist");
-                    return StatusCode((int)HTTPStatusCode.Conflict, "Order already exist");
+                    return StatusCode((int)HttpStatusCode.Conflict, "Order already exist");
                 }
                 else
                 {
                     var query = await _orderService.CreateOrder(entity);
-                    return StatusCode((int)HTTPStatusCode.OK, query);
+                    return StatusCode((int)HttpStatusCode.OK, query);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.StackTrace);
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.StackTrace);
             }
         }
 
@@ -119,18 +120,18 @@ namespace Northwind_def.Controllers
             {
                 if (!await _orderService.ExistsOrder(o.OrderID))
                 {
-                    return StatusCode((int)HTTPStatusCode.NotFound, "Employee not found");
+                    return StatusCode((int)HttpStatusCode.NotFound, "Employee not found");
                 }
                 else
                 {
                     var emp = await _orderService.UpdateOrder(o);
 
-                    return StatusCode((int)HTTPStatusCode.OK, emp);
+                    return StatusCode((int)HttpStatusCode.OK, emp);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.StackTrace);
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.StackTrace);
             }
         }
 
@@ -141,18 +142,18 @@ namespace Northwind_def.Controllers
             {
                 if (!await _orderService.ExistsOrder(o.OrderID))
                 {
-                    return StatusCode((int)HTTPStatusCode.NotFound, "Employee Not Found");
+                    return StatusCode((int)HttpStatusCode.NotFound, "Employee Not Found");
                 }
                 else
                 {
                     var flag = await _orderService.DeleteOrder(o);
 
-                    return StatusCode((int)HTTPStatusCode.OK, flag);
+                    return StatusCode((int)HttpStatusCode.OK, flag);
                 }
             }
             catch (Exception e)
             {
-                return StatusCode((int)HTTPStatusCode.InternalServerError, e.StackTrace);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.StackTrace);
             }
         }
     }
