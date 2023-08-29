@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SHowE9m1AleAi1r97oQTTiNHCGpPyR+SO4GhrvXw0oRHlzU3wwO+YRtCulPJrVe8EVFJLx/82Mgvw5wD0HUNDg==",
+  "dgSpecHash": "j2OIHN9N1ovW2eI3feaEML+kDb4JwIO8ckWfJ+zzLTSlarE+E5Rj1/v7m1i3Jo3jgUTOKus55iAexA1tf1CXYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind Project\\ServiceLayer\\ServiceLayer.csproj",
+  "projectFilePath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind project\\ServiceLayer\\ServiceLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pspicoli\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\pspicoli\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

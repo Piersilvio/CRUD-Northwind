@@ -8715,11 +8715,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind Project\\Northwind.csproj",
+      "projectUniqueName": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind project\\Northwind.csproj",
       "projectName": "Northwind",
-      "projectPath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind Project\\Northwind.csproj",
+      "projectPath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind project\\Northwind.csproj",
       "packagesPath": "C:\\Users\\pspicoli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind Project\\obj\\",
+      "outputPath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -8741,11 +8741,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind Project\\ConfigurationLayer\\ConfigurationLayer.csproj": {
-              "projectPath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind Project\\ConfigurationLayer\\ConfigurationLayer.csproj"
+            "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind project\\ConfigurationLayer\\ConfigurationLayer.csproj": {
+              "projectPath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind project\\ConfigurationLayer\\ConfigurationLayer.csproj"
             },
-            "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind Project\\ServiceLayer\\ServiceLayer.csproj": {
-              "projectPath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind Project\\ServiceLayer\\ServiceLayer.csproj"
+            "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind project\\ServiceLayer\\ServiceLayer.csproj": {
+              "projectPath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind project\\ServiceLayer\\ServiceLayer.csproj"
             }
           }
         }

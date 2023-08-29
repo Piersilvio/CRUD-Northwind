@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qglThXf4tEDvJZZ6L6qktJEAXHJ+9e+9zWIh8gGgQOIAwMloBS9KXGzI5/YYEaplXteho9vV2945D6qlMiVing==",
+  "dgSpecHash": "4+6PcUgB6QthfxepJk0w8KHDcPiXYQyjTvZ4e/SeJ75D3kaQThQhLuW7rTVuJi+amy6Ri/tGMP8SfqpNKUxZHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind Project\\DBLayer\\DBLayer.csproj",
+  "projectFilePath": "C:\\Users\\pspicoli\\Desktop\\CRUD Northwind project\\DBLayer\\DBLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pspicoli\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\pspicoli\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
