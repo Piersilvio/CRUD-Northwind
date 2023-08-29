@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Northwind;
 using ServiceLayer.DTO;
 using ServiceLayer.IService;
+using System.Net;
 
 namespace Northwind_def.Controllers
 {
@@ -32,17 +33,17 @@ namespace Northwind_def.Controllers
                 if (!await _supplierService.ExistsSupplier(id))
                 {
                     ModelState.AddModelError("SupplierID", "Supplier doesn't exist");
-                    return StatusCode((int)HTTPStatusCode.Conflict, "Supplier doesn't exist");
+                    return StatusCode((int)HttpStatusCode.Conflict, "Supplier doesn't exist");
                 }
                 else
                 {
                     var em = await _supplierService.GetSupplier(id);
-                    return StatusCode((int)HTTPStatusCode.OK, em);
+                    return StatusCode((int)HttpStatusCode.OK, em);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.Message);
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
@@ -54,16 +55,16 @@ namespace Northwind_def.Controllers
                 var emp = await _supplierService.GetSupplierByCity(city);
                 if (emp is null)
                 {
-                    return StatusCode((int)HTTPStatusCode.NotFound, "Supplier not founjd");
+                    return StatusCode((int)HttpStatusCode.NotFound, "Supplier not founjd");
                 }
                 else
                 {
-                    return StatusCode((int)HTTPStatusCode.OK, emp);
+                    return StatusCode((int)HttpStatusCode.OK, emp);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.Message);
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
@@ -75,17 +76,17 @@ namespace Northwind_def.Controllers
                 if (!await _supplierService.ExistsSupplier(entity.SupplierID))
                 {
                     ModelState.AddModelError("SupplierId", "Supplier already exist");
-                    return StatusCode((int)HTTPStatusCode.Conflict, "Supplier already exist");
+                    return StatusCode((int)HttpStatusCode.Conflict, "Supplier already exist");
                 }
                 else
                 {
                     var query = await _supplierService.CreateSupplier(entity);
-                    return StatusCode((int)HTTPStatusCode.OK, query);
+                    return StatusCode((int)HttpStatusCode.OK, query);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.Message);
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
@@ -96,18 +97,18 @@ namespace Northwind_def.Controllers
             {
                 if (await _supplierService.ExistsSupplier(s.SupplierID))
                 {
-                    return StatusCode((int)HTTPStatusCode.NotFound, "Supplier not found");
+                    return StatusCode((int)HttpStatusCode.NotFound, "Supplier not found");
                 }
                 else
                 {
                     var emp = await _supplierService.UpdateSupplier(s);
 
-                    return StatusCode((int)HTTPStatusCode.OK, emp);
+                    return StatusCode((int)HttpStatusCode.OK, emp);
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode((int)HTTPStatusCode.InternalServerError, ex.Message);
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
             }
         }
 
@@ -118,18 +119,18 @@ namespace Northwind_def.Controllers
             {
                 if (!await _supplierService.ExistsSupplier(entity.SupplierID))
                 {
-                    return StatusCode((int)HTTPStatusCode.NotFound, "Supplier Not Found");
+                    return StatusCode((int)HttpStatusCode.NotFound, "Supplier Not Found");
                 }
                 else
                 {
                     var flag = await _supplierService.DeleteSupplier(entity);
 
-                    return StatusCode((int)HTTPStatusCode.OK, flag);
+                    return StatusCode((int)HttpStatusCode.OK, flag);
                 }
             }
             catch (Exception e)
             {
-                return StatusCode((int)HTTPStatusCode.InternalServerError, e.Message);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
     }
